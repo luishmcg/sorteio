@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+  <title>Sorteio</title>
+  <script>
+    function sortear() {
+      var nomes = document.getElementById('nomes').value.split(',');
+      var index = Math.floor(Math.random() * nomes.length);
+      var nomeSorteado = nomes[index].trim();
+      alert('O nome sorteado é: ' + nomeSorteado);
+    }
+  </script>
+</head>
+<body>
+  <h1>Sorteio</h1>
+  <label for="nomes">Insira os nomes (separados por vírgula):</label>
+  <input type="text" id="nomes" name="nomes"><br><br>
+  <button onclick="sortear()">Sortear</button><br><br>
+</body>
+</html>
